@@ -1,0 +1,154 @@
+1) ¿Que ventajas en cuanto al polimorfismo, brindan las interfaces en Java?
+
+RESPUESTA: Las interfaces en Java permiten el polimorfismo al proporcionar 
+un contrato común que las clases concretas pueden implementar,
+lo que permite tratar objetos de diferentes clases de manera uniforme 
+a través de la interfaz común.
+Esto mejora la flexibilidad y la extensibilidad del código
+
+
+2) ¿Por que no siempre puedo utilizar clases abstractas para agrupar clases polimorficas?
+
+RESPUESTA: Porque no existe la herencia multiple en Java lo cual implica que solo se
+puede heredar de una unica clase abstracta y esto limita la flexibilidad y extensibilidad
+del codigo. VER
+
+
+3) ¿Que ventajas tienen las clases abstractas sobre las interfaces?
+
+RESPUESTA : Las clases abstractas pueden proporcionar implementaciones predeterminadas 
+para algunos de sus métodos, lo que permite a las subclases heredar 
+y utilizar esas implementaciones si es necesario. En contraste, 
+las interfaces no pueden proporcionar implementaciones predeterminadas para ningún método.
+
+
+4) ¿Se puede instanciar una interfaz?
+
+RESPUESTA: No, no se puede instanciar una interfaz o lo que es lo mismo, no se pueden crear objetos a partir
+de ella. Las interfaces solo pueden ser implementadas por otras clases.
+
+
+5) ¿Por que no es recomendable incrementar o modificar las firmas definidas en una interface ?
+
+RESPUESTA:
+
+Rompe la compatibilidad hacia atrás:
+Si modificas la firma de un método en una interfaz, 
+todas las clases que implementan esa interfaz deberán actualizarse para adaptarse a la nueva firma.
+Esto puede romper la compatibilidad hacia atrás con el código existente que utiliza esas clases. 
+Las actualizaciones de código pueden ser costosas y propensas a errores, especialmente en proyectos grandes.
+
+Dificulta la evolución del código:
+Las interfaces suelen utilizarse para establecer un contrato de comportamiento
+que las clases implementadoras deben seguir. Si cambias la firma de un método en una interfaz,
+estás cambiando el contrato, lo que puede ser confuso y dificultar la evolución y el mantenimiento
+del código a lo largo del tiempo.
+
+Puede requerir cambios en muchas clases: 
+Si una interfaz se utiliza en muchas partes del código, 
+modificar su firma puede requerir cambios en múltiples clases,
+lo que aumenta la complejidad y el riesgo de introducir errores.
+
+Violación del principio de sustitución de Liskov:
+La modificación de la firma de un método en una interfaz puede violar el principio de sustitución de Liskov,
+que es un principio importante de la programación orientada a objetos.
+Este principio establece que los objetos de una subclase deben poder reemplazar objetos de la clase base
+sin afectar la corrección del programa. Si cambias la firma de un método en una interfaz,
+las subclases existentes que implementan esa interfaz pueden no ser compatibles con la nueva firma,
+lo que rompe este principio.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
