@@ -28,6 +28,10 @@ public class Cliente {
 		
 	}
 	
+	public void registrarFactura(Factura factura) {
+		this.caja.registrarPago(factura);
+	}
+	
 	public void agregar(Producto producto) {
 		listaDeCompra.add(producto);
 	}

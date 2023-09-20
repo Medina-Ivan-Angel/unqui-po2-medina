@@ -7,7 +7,7 @@ public class Mercado {
 
 	//Atributos
 	private List<Producto> stock = new ArrayList<Producto>();
-	
+	private double montoAPagarAgencia;
 	
 	//Metodos
 	public void remover(Producto producto) {
@@ -27,8 +27,13 @@ public class Mercado {
 		return this.stock;
 	}
 	
+	public void setMontoAPagarAgencia(double monto) {
+		this.setMontoAPagarAgencia(monto);
+	}
 	
-	
+	public double getMontoAPagarAgencia() {
+		return this.montoAPagarAgencia;
+	}
 	
 	
 	

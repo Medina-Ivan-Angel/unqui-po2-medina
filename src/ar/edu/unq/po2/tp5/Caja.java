@@ -1,6 +1,6 @@
 package ar.edu.unq.po2.tp5;
 
-public class Caja {
+public class Caja implements Agencia{
 
 	//Atributos
 	private Mercado mercado;
@@ -28,6 +28,13 @@ public class Caja {
 		
 		
 		
+		
+	}
+
+	@Override
+	public void registrarPago(Factura factura) {
+		
+		mercado.setMontoAPagarAgencia(factura.getMontoAPagar());
 		
 	}
 	

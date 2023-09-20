@@ -8,9 +8,11 @@ import org.junit.jupiter.api.Test;
 
 import ar.edu.unq.po2.tp5.Caja;
 import ar.edu.unq.po2.tp5.Cliente;
+import ar.edu.unq.po2.tp5.Impuesto;
 import ar.edu.unq.po2.tp5.Mercado;
 import ar.edu.unq.po2.tp5.ProductoCooperativa;
 import ar.edu.unq.po2.tp5.ProductoTradicional;
+import ar.edu.unq.po2.tp5.Servicio;
 
 class MercadoTest {
 
@@ -25,6 +27,11 @@ class MercadoTest {
 	private ProductoCooperativa Maizena;
 	private ProductoCooperativa Soja;
 	private ProductoCooperativa Jugo;
+	
+	//Ejercicio 2
+	private Servicio aguaCorriente;
+	private Servicio luzElectrica;
+	private Impuesto ganancias;
 	
 	
 	@BeforeEach
@@ -77,6 +84,13 @@ class MercadoTest {
 		cliente2.agregar(Fideo);
 		cliente2.agregar(Fideo);
 		
+		
+		//Para el ejercicio 2 inicializamos las facturas
+		
+		aguaCorriente = new Servicio(100, 20);
+		luzElectrica  = new Servicio(200, 10);
+		ganancias     = new Impuesto(1000);
+		
 	}
 	
 	
@@ -94,5 +108,18 @@ class MercadoTest {
 	void testStockMercado() {
 		cliente2.registrarProductos();
 		assertTrue(mercado.getStock().contains(Fideo));
+	}
+	
+	//Ejercicio 2
+	void testRegistroDeImpuestos() {
+		cliente1.registrarFactura(ganancias);
+		assertEquals(1000, mercado.getMontoAPagarAgencia());
+	}
+	
+	
+	void testRegistroDeServicios() {
+		cliente2.registrarFactura(luzElectrica);
+		cliente2.registrarFactura(aguaCorriente);
+		assertEquals(4000, mercado.getMontoAPagarAgencia());
 	}
 }
