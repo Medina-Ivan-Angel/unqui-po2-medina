@@ -28,6 +28,18 @@ public class Instanciacion {
 		EmpleadoTemporal t3 =
 				new EmpleadoTemporal("Jorge", "3336", true, LocalDate.of(1983, 2, 4), 100, LocalDate.of(2030, 5, 7), 20);
 		
+		//Ejercicio II
+		//3 empleados Contratados
+		EmpleadoContratado c1 =
+				new EmpleadoContratado("Mariano", "4567", true, LocalDate.of(1977, 12, 4), 500, 20, "Cheque");
+		
+		EmpleadoContratado c2 =
+				new EmpleadoContratado("Maria", "4167", true, LocalDate.of(1967, 2, 5), 500, 10, "Cheque");
+		
+		EmpleadoContratado c3 =
+				new EmpleadoContratado("Fernando", "1117", false, LocalDate.of(1997, 11, 5), 500, 2, "Transferencia Bancaria");
+		
+		
 		//Empresa
 		Empresa empresa = new Empresa();
 		
@@ -39,6 +51,10 @@ public class Instanciacion {
 		empresa.addEmpleado(t2);
 		empresa.addEmpleado(t3);
 		
+		//Ejercicio II 
+		empresa.addEmpleado(c1);
+		empresa.addEmpleado(c2);
+		empresa.addEmpleado(c3);
 		
 		//I) Calculo total de sueldo neto
 		System.out.println("TOTAL SUELDO NETO: " + empresa.montoTotalNeto());
