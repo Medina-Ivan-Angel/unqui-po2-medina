@@ -1,0 +1,83 @@
+VIOLACIONES A LOS PRINCIPIOS SOLID
+
+
+1) PRINCIPIO DE RESPONSABILIDAD UNICA
+
+- La clase ClienteEmail deberia solo manejar la conexion con el servidor. Todo el
+manejo de correos deberia ser responsabilidad de otra clase.
+
+- Solucion -Agregar la clase CorreoManager que se encargue de administrar los correos.
+
+Motivos: Porque si hubiera que implementar nuevos tipos de correo, como el de spam, eso añadiria
+demasiada complejidad a ClienteEmail.¿?
+
+
+2) PRINCIPIO ABIERTO - CERRADO
+
+- Los atributos de la clase ClienteEmail son declarados como publicos lo que es una violacion
+a este principio ya que al realizar codigo que utilice dichos atributos, si estos cambian de forma, habra 
+que cambiar el codigo en todos los lugares donde sea utilizado.
+
+-SOLUCION - Hacer dichos atributos privados y escribir metodos getters y setters segun corresponda.
+
+3) PRINCIPIO DE SUSTITUCION DE LISKOV
+
+
+
+4) PRINCIPIO DE SEGREGACION DE INTERFACES
+
+- Los metodos tazaDeTransferencia(), resetear() y realizarBackUp() jamas son utilizados por el
+servidorPoP, podrian separarse de la interfaz IServidor en otra interfaz diferente llamada 
+IServidorUtilities.
+
+- Solucion - Agregar la clase IServidorUtilities con los metodos tazaDeTransferencia(), resetear(),
+y realizarBackUp().
+
+
+5) PRINCIPIO DE INVERSION DE DEPENDENCIAS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
