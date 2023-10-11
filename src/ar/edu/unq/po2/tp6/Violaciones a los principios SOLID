@@ -4,7 +4,7 @@ VIOLACIONES A LOS PRINCIPIOS SOLID
 1) PRINCIPIO DE RESPONSABILIDAD UNICA
 
 - La clase ClienteEmail deberia solo manejar la conexion con el servidor. Todo el
-manejo de correos deberia ser responsabilidad de otra clase.
+manejo de correos deberia ser responsabilidad de otra clase o.
 
 - Solucion -Agregar la clase CorreoManager que se encargue de administrar los correos.
 
