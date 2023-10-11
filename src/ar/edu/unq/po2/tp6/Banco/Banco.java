@@ -16,7 +16,7 @@ public class Banco {
 		clientes.add(cliente);
 	}
 	
-	//Agregar solicitud a la lista de solicitudes
+	//Agregar solicitud a la lista de solicitudes TODO: ¿No es peligroso añadir solicitudes sin validar en el metodo registro?
 	public void addSolicitud(Solicitud solicitud) {
 		solicitudes.add(solicitud);
 	}
@@ -32,7 +32,7 @@ public class Banco {
 		solicitud.validar();
 		
 		//Registrar solicitud
-		solicitudes.add(solicitud);
+		this.addSolicitud(solicitud);
 		
 		//Realizar pago si corresponde
 		if(solicitud.getEsValido()) {
@@ -70,8 +70,14 @@ public class Banco {
 		
 		return montoTotal;
 	}
-	
-	
-	
-	
+
+	//Getters and Setters
+	public List<Cliente> getClientes() {
+		return clientes;
+	}
+
+	public List<Solicitud> getSolicitudes() {
+		return solicitudes;
+	}
+
 }

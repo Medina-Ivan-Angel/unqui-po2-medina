@@ -12,8 +12,20 @@ public class Cliente {
 	private double sueldoNetoAnual;
 	private double saldo;
 	
-	
-	
+
+	//Constructor
+	public Cliente(String nombre, String apellido, String direccion, int edad, double sueldoNetoMensual, double saldo) {
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.direccion = direccion;
+		this.edad = edad;
+		this.sueldoNetoMensual = sueldoNetoMensual;
+		this.saldo = saldo;
+		
+		this.setSueldoNetoAnual();
+	}
+
+
 	//Metodos
 	public void solicitarCredito(Banco banco, Solicitud solicitud) {
 		banco.registrarSolicitud(solicitud);
@@ -54,9 +66,12 @@ public class Cliente {
 	public double getSueldoNetoAnual() {
 		return sueldoNetoAnual;
 	}
-	public void setSueldoNetoAnual(double sueldoNetoAnual) {
-		this.sueldoNetoAnual = sueldoNetoAnual;
+	
+	//TODO: Esto esta bien?
+	public void setSueldoNetoAnual() {
+		this.sueldoNetoAnual = this.sueldoNetoMensual * 12;
 	}
+	
 	public double getSaldo() {
 		return saldo;
 	}
