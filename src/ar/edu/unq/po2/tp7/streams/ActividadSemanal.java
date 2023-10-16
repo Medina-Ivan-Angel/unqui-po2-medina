@@ -49,7 +49,16 @@ public class ActividadSemanal {
 		return costoTotal;
 		
 	}
+
+
+	public Deporte getDeporte() {
+		return deporte;
+	}
 	
+	public double getDuracion() {
+		return duracion;
+	}
+
 	
 	
 	
