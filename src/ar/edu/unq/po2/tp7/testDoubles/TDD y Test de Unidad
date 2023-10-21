@@ -1,0 +1,39 @@
+    TDD Y TEST DE UNIDAD.
+    
+    
+   1) Mantener en forma exhaustiva una suite de tests:
+
+    Este postulado se refiere a la importancia de mantener una suite de pruebas automatizadas que cubra exhaustivamente todas las funcionalidades del software. Implica que debes escribir y mantener pruebas para cada aspecto del código que deseas probar. Algunos puntos clave son:
+
+        Cobertura completa: Debes escribir pruebas para cada función, método o componente del software, asegurándote de que todas las rutas posibles del código estén cubiertas.
+
+        Mantenimiento constante: A medida que el código evoluciona, las pruebas deben actualizarse y mantenerse al día. Si se agrega, modifica o elimina funcionalidad, las pruebas también deben ajustarse en consecuencia.
+
+        Automatización: Las pruebas deben ser automatizadas para que puedan ejecutarse con facilidad y frecuencia. Esto garantiza que las pruebas se realicen de manera consistente y rápida, lo que es fundamental para la detección temprana de errores.
+
+    Mantener una suite de pruebas exhaustiva es esencial para garantizar que el software funcione como se espera y para facilitar la detección de problemas o cambios inesperados.
+
+   2) No deben utilizarse para testear otros objetos del dominio:
+
+    Este postulado hace referencia a que las pruebas unitarias, en el contexto de TDD, deben centrarse en probar una única unidad de código o componente aislado. No deben utilizarse para probar otros objetos o componentes que no sean el que se está evaluando. Algunos puntos clave son:
+
+        Aislamiento de la prueba: Las pruebas unitarias deben aislar la unidad de código que se está probando. Cualquier interacción con otros objetos del dominio debe simularse o "mockearse" para que la prueba se centre en evaluar únicamente la lógica de la unidad bajo prueba.
+
+        Facilita la identificación de problemas: Al mantener un enfoque estricto en una unidad de código a la vez, las pruebas unitarias ayudan a identificar y solucionar problemas específicos de ese componente sin verse afectados por errores en otros objetos del dominio.
+
+        Fomenta el diseño modular: Este enfoque promueve la construcción de software con componentes bien definidos y acoplamiento mínimo, lo que facilita la reutilización y el mantenimiento del código.
+
+    
+    3) Comunicar la intención del test:
+
+    Este postulado hace hincapié en que las pruebas deben ser comprensibles y comunicar claramente cuál es su propósito o intención. Algunos aspectos clave son:
+
+        Nombres descriptivos: Los nombres de las pruebas deben ser descriptivos y reflejar la funcionalidad que están probando. Esto facilita la comprensión de lo que se está probando, incluso para personas que no escribieron las pruebas.
+
+        Escenarios y contexto claros: Cada prueba debe establecer claramente el escenario o contexto en el que se está realizando la prueba. Esto ayuda a los desarrolladores a comprender las condiciones bajo las cuales se espera que el código funcione.
+
+        Documentación en el código: Puedes utilizar comentarios o anotaciones para explicar por qué se está realizando una prueba en particular y qué comportamiento se espera.
+
+    La comunicación efectiva de la intención de las pruebas es crucial para que los equipos de desarrollo comprendan, mantengan y modifiquen el código con confianza, ya que facilita la interpretación y el diagnóstico de problemas.
+
+En resumen, estos postulados del TDD y las pruebas unitarias subrayan la importancia de mantener pruebas exhaustivas, centrarse en la prueba de una unidad de código a la vez y comunicar claramente la intención de las pruebas, lo que contribuye a un desarrollo de software más sólido y mantenible.
