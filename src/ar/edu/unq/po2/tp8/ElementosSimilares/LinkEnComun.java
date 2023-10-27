@@ -2,6 +2,7 @@ package ar.edu.unq.po2.tp8.ElementosSimilares;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class LinkEnComun extends Filtro {
 
@@ -10,6 +11,7 @@ public class LinkEnComun extends Filtro {
 		
 		List<WikipediaPage> listaResultado = new ArrayList<WikipediaPage>();
 		
+		/* FEO
 		for(WikipediaPage pagina : listaPaginas) {
 			
 			for(WikipediaPage link : page.getLinks()) {
@@ -21,7 +23,13 @@ public class LinkEnComun extends Filtro {
 			}
 			
 			
-		}
+		}*/
+		
+		//No funka
+		listaResultado = listaPaginas.stream()
+	            .filter(page.getLinks()::contains)  // Filtra los elementos que están en ambas listas
+	            .collect(Collectors.toList());
+		
 		return listaResultado;
 	}
 
