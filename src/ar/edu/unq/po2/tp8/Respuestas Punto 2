@@ -1,0 +1,23 @@
+2. Responda:
+a. ¿Dónde se define el esqueleto del algoritmo?
+
+RESPUESTA: En una clase abstracta, (padre de la clase concreta) que implementa el template method.
+
+
+
+
+b. ¿Se puede redefinir el esqueleto?
+
+RESPUESTA: No, la estructura del algoritmo no puede ser redefinida ya que viene establecida
+en la clase padre abstracta.
+
+c. ¿Qué es lo que se puede redefinir?
+
+RESPUESTA: Se puede redefinir las implementaciones de los metodos que no tengan una 
+implementacion predefinida dentro del template method
+
+
+d. ¿Qué es un hook method?
+
+RESPUESTA: Un hook method es un metodo, a menudo sin implementacion, que puede ser expandido o sobreescrito 
+(override) por la clase hija.

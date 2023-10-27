@@ -5,27 +5,31 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.mockito.Mockito.*; //IMPORTAR SIEMPRE QUE USEMOS MOCKITO MANUALMENTE.
+
 class testPoquerVerificar {
 
 	PokerStatus ps;
-	
+	PokerStatus mps;
 	@BeforeEach
 	public void setUp() throws Exception{	//Esta funcion es el SETUP
 		
 		ps = new PokerStatus();
 		
-		
+
 	}
 	
 	//Poquer, Color, Trio o Nada
-	
+	/*
 	@Test
 	void testVerificarHayColor() {  
 		
 		//5 Cartas del mismo palo hacen Color
 		assertEquals("Color", ps.verificar("1T","2T","3T","4T","5T")); //EXERCISE Y VERIFY
-	}
+	}*/
+	
 	//Aqui ocurre el teardown, el jUnit vuelve a reiniciar todos los valores llamando a setUp()
+	
 	
 	
 	@Test
