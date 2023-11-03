@@ -1,0 +1,39 @@
+1. En la intención del patrón se indica que el cliente debe poder tratar de manera 
+   uniforme tanto a objetos individuales como compuestos.
+ ¿ Cómo se logra esto con el patrón Composite?
+
+
+Debido a que tanto el objeto individual como el compuesto implementan la misma interfaz
+implementan los mismos metodos por lo que se puede llamar al objeto individual/compuesto . metodo()
+en el caso del compuesto, este posee una lista de objetos individuales u otros compuestos que tambien
+implementan la interfaz antes mencionada, por lo que recorre la lista llamando al metodo comun a todos.
+
+
+
+2. Explique en que casos aplicaria el patron
+
+Lo aplicaria en casos donde existieran objetos individuales y objectos que estan compuestos
+de dichos objectos individuales y quisiera poder tratarlos indistintamente uno de otro.
+
+
+3.Dentro de las consecuencias, se indica que los
+clientes deben mantenerse simples y no deben ser
+conscientes si estan interactuando con un objeto 
+hoja o una composicion 
+¿Que elementos de POO hacen posible esto?
+
+Los elementos de POO que permiten hacer esto son:
+
+Polimorfismo: ya que tratamos a objetos individuales 
+y compuestos a traves de una interfaz comun.
+
+Abstraccion e interfaces: Por el mismo motivo que el anterior, el uso de una interfaz comun.
+
+Encapsulamiento: Los detalles de implementación se ocultan a los clientes.
+Los clientes no necesitan saber cómo se implementan las hojas o las composiciones;
+solo necesitan interactuar a través de la interfaz común.
+
+Herencia y Composición: El patrón Composite utiliza tanto herencia como composición
+para construir la estructura de árbol. Las hojas y los nodos compuestos pueden 
+heredar de una misma clase o implementar una misma interfaz, lo que facilita el
+tratamiento uniforme de todos los elementos.
